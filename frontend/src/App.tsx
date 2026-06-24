@@ -5,7 +5,7 @@ import History from './pages/History';
 import KnowledgeBase from './pages/KnowledgeBase';
 import Analytics from './pages/Analytics';
 
-export const API_URL = 'http://localhost:5000/api';
+export const API_URL = 'https://ai-code-reviewerr-umxn.onrender.com/api';
 
 function App() {
   const [activeTab, setActiveTab] = useState<'editor' | 'history' | 'kb' | 'analytics'>('editor');
