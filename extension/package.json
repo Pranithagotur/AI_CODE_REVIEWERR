@@ -1,0 +1,63 @@
+{
+  "name": "ai-code-review-extension",
+  "displayName": "ReviewLLM: AI Code Reviewer",
+  "description": "IDE Integration for the AI-Based Code Review System using hybrid rule validation and sandboxing.",
+  "version": "1.0.0",
+  "publisher": "ReviewLLM",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": {
+    "Programming Languages": "linters"
+  },
+  "activationEvents": [
+    "onCommand:aiCodeReview.reviewFile"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiCodeReview.reviewFile",
+        "title": "ReviewLLM: Review Current File",
+        "category": "Code Review"
+      },
+      {
+        "command": "aiCodeReview.clearDiagnostics",
+        "title": "ReviewLLM: Clear Review Markings",
+        "category": "Code Review"
+      }
+    ],
+    "configuration": {
+      "title": "ReviewLLM Configuration",
+      "properties": {
+        "reviewLlm.backendUrl": {
+          "type": "string",
+          "default": "http://localhost:5000/api",
+          "description": "Backend API server endpoint address."
+        },
+        "reviewLlm.mode": {
+          "type": "string",
+          "enum": [
+            "developer",
+            "student"
+          ],
+          "default": "developer",
+          "description": "Review details depth mode (Developer vs Student)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.4.5"
+  }
+}
