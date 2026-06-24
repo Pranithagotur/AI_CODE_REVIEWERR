@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Plus, BookOpen, ShieldAlert, Sparkles, Zap, Filter, CheckCircle2 } from 'lucide-react';
+import { Search, Plus, BookOpen, ShieldAlert, Sparkles, Zap, Filter } from 'lucide-react';
 import { API_URL } from '../App';
 
 interface KBItem {

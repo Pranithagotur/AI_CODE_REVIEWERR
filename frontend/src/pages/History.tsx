@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, Code, Eye, FileCode2, Clock, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Eye, FileCode2, Clock, Sparkles } from 'lucide-react';
 import { API_URL } from '../App';
 
 interface HistoryItem {

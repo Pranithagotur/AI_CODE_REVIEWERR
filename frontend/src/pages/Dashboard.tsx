@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Editor from '@monaco-editor/react';
-import { Play, Sparkles, ShieldAlert, Terminal, CheckCircle2, ChevronRight, BookOpen, AlertTriangle } from 'lucide-react';
+import { Sparkles, ShieldAlert, Terminal, CheckCircle2, ChevronRight, BookOpen, AlertTriangle } from 'lucide-react';
 import { API_URL } from '../App';
 
 // Pre-defined code templates for users to test the platform's engines

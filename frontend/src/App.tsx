@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Terminal, Database, BookOpen, BarChart3, LogIn, LogOut, Code, User, Sun, Moon } from 'lucide-react';
+import React, { useState } from 'react';
+import { Terminal, Database, BookOpen, BarChart3, LogIn, LogOut, Code } from 'lucide-react';
 import Dashboard from './pages/Dashboard';
 import History from './pages/History';
 import KnowledgeBase from './pages/KnowledgeBase';

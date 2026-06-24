@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip, LineChart, Line, XAxis, YAxis, CartesianGrid, BarChart, Bar } from 'recharts';
-import { BarChart3, TrendingUp, Trophy, AlertTriangle, Lightbulb } from 'lucide-react';
+import { BarChart3, TrendingUp, Trophy, Lightbulb } from 'lucide-react';
 import { API_URL } from '../App';
 
 interface AnalyticsProps {
@@ -227,7 +227,7 @@ function Analytics({ token }: AnalyticsProps) {
                       paddingAngle={4}
                       dataKey="value"
                     >
-                      {languagesData.map((entry, index) => (
+                      {languagesData.map((_: any, index: number) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
@@ -237,7 +237,7 @@ function Analytics({ token }: AnalyticsProps) {
                 
                 {/* Legend list */}
                 <div className="flex flex-col space-y-2 shrink-0 ml-4">
-                  {languagesData.map((item, idx) => (
+                  {languagesData.map((item: any, idx: number) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: COLORS[idx % COLORS.length] }} />
                       <span className="font-bold text-white text-[11px]">{item.name} ({item.value})</span>
@@ -258,7 +258,7 @@ function Analytics({ token }: AnalyticsProps) {
                     <YAxis stroke="#64748b" allowDecimals={false} />
                     <Tooltip contentStyle={{ backgroundColor: '#161b26', borderColor: '#242b3d', color: '#fff' }} />
                     <Bar dataKey="count" fill="#6366f1" radius={[4, 4, 0, 0]} maxBarSize={45}>
-                      {mistakesData.map((entry, index) => (
+                      {mistakesData.map((_: any, index: number) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Bar>
